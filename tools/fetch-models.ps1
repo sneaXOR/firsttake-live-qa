@@ -27,7 +27,7 @@ if (Test-Path -LiteralPath $destination -PathType Leaf) {
     throw "Existing model has an unexpected SHA-256: $existingHash"
 }
 
-$temporary = Join-Path $env:TEMP (
+$temporary = Join-Path ([System.IO.Path]::GetTempPath()) (
     "firsttake-hand-landmarker-" + [guid]::NewGuid().ToString() + ".task"
 )
 try {

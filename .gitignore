@@ -1,0 +1,34 @@
+.gradle/
+**/build/
+local.properties
+.idea/
+*.iml
+
+.pytest_cache/
+**/__pycache__/
+*.py[cod]
+.venv/
+
+*.apk
+*.aab
+*.jks
+*.keystore
+keystore.properties
+
+# Downloaded at build time and checked against a pinned SHA-256.
+app/src/main/assets/hand_landmarker.task
+
+# Real capture sessions may contain private video and sensor data.
+/captures/
+/sessions/
+/evidence/
+*.mp4
+*.mcap
+*.wal
+qa-events.jsonl
+manifest.json
+postflight.json
+hashes.sha256
+
+.DS_Store
+Thumbs.db

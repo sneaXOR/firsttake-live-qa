@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">FirstTake</string>
+    <string name="camera_permission_required">Camera permission is required</string>
+    <string name="preparing_camera">Preparing camera…</string>
+    <string name="record">RECORD</string>
+</resources>

@@ -23,7 +23,14 @@ the pipeline: prevent a correctable capture error from becoming an entire take
 that must be reviewed or recollected.
 
 This is a real native Android implementation, not a simulated web demo. The
-capture path produces:
+repository is split into:
+
+- `liveqa-android`: the reusable on-device capture and QA module;
+- `app`: a thin reference application that proves the module against a real
+  CameraX recording lifecycle;
+- `tools`: independent evidence and campaign verification.
+
+The module produces:
 
 ```text
 capture.mp4
@@ -50,9 +57,10 @@ capture events, analysis-frame timestamps, and runtime profile changes.
 - Session telemetry is append-only and hash-chained.
 - Interrupted sessions are inspected and recovered without modifying sources.
 
-The reusable decision logic is separated from CameraX in monitor and policy
-classes such as `FrameQualityMonitor`, `HandVisibilityMonitor`,
-`AnalyzerBudgetController`, and `RuntimePolicy`.
+The reusable decision logic is separated from the host application in monitor
+and policy classes such as `FrameQualityMonitor`, `HandVisibilityMonitor`,
+`AnalyzerBudgetController`, and `RuntimePolicy`. The sample app contains only
+the activity and presentation needed to exercise the module.
 
 ## Build
 
@@ -61,7 +69,7 @@ Requirements: JDK 17 and Android SDK 36.
 ```powershell
 pwsh ./tools/fetch-models.ps1
 ./gradlew.bat testDebugUnitTest
-./gradlew.bat assembleDebug
+./gradlew.bat assembleDebug :liveqa-android:assembleRelease
 ```
 
 The hand model is downloaded from the official MediaPipe model bucket and

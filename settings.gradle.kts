@@ -14,5 +14,5 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "FirstTakeAndroidProbe"
-include(":app")
+rootProject.name = "FirstTake"
+include(":app", ":liveqa-android")

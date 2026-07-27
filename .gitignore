@@ -16,7 +16,7 @@ local.properties
 keystore.properties
 
 # Downloaded at build time and checked against a pinned SHA-256.
-app/src/main/assets/hand_landmarker.task
+liveqa-android/src/main/assets/hand_landmarker.task
 
 # Real capture sessions may contain private video and sensor data.
 /captures/

@@ -12,7 +12,7 @@ $expectedSha256 = (
     "FBC2A30080C3C557093B5DDFC334698132EB341044CCEE322CCF8BCF3607CDE1"
 )
 $assetDirectory = Join-Path $PSScriptRoot (
-    "..\app\src\main\assets"
+    "..\liveqa-android\src\main\assets"
 )
 $destination = Join-Path $assetDirectory "hand_landmarker.task"
 

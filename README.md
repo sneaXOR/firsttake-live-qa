@@ -81,20 +81,3 @@ Python verification tests:
 python -m pip install pytest
 python -m pytest tools/evidence tools/android-live-qa
 ```
-
-## Evidence boundaries
-
-The current device proof is a Nothing A059 running Android 16. On-device tests
-confirmed real 1920×1080 output, finalized MCAP, zero dropped telemetry records,
-and live voice/haptic transitions for hand loss, camera obstruction, and
-instability.
-
-This repository does **not** claim:
-
-- semantic task-quality assessment;
-- compatibility across the Android device ecosystem;
-- that a missing hand is certain without a preceding positive track;
-- RGB–IMU content alignment beyond the timestamp evidence currently recorded;
-- affiliation with or access to Hub's internal systems.
-
-No Hub data, private capture, generated demo, or cloud backend is included.
